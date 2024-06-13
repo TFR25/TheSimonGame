@@ -16,7 +16,7 @@ let startGame = false;
 let gameLevel = 0;
 
 function randomNum() {
-  `generate a random number between 0 and 3`;
+  // generate a random number between 0 and 3
   return Math.floor(Math.random() * 4);
 }
 
@@ -73,13 +73,13 @@ function randomColor() {
       }
     }, 500 * index);
   });
-  `reset user pattern for next round`;
+  // reset user pattern for next round
   userPattern = [];
 }
 
 function gameOver() {
   $("h1").html("Game Over");
-  $("h2").html("Press Any Key To Start");
+  $("h2").html("Press Any Key or Touch Screen To Start");
   $("body").addClass("gameOver");
   new Audio("./sound/wrong.mp3").play();
 
@@ -115,18 +115,24 @@ function userTurn() {
 }
 
 function start() {
+  function initializeGame() {
+    if (!startGame) {
+      startGame = true;
+      $("body").removeClass("gameOver");
+      randomColor();
+      $("h1").html("Game Started");
+      $("p").html("Level " + gameLevel);
+      userTurn();
+    }
+  }
+
   $(document)
     .off("keydown")
-    .on("keydown", function () {
-      if (!startGame) {
-        startGame = true;
-        $("body").removeClass("gameOver");
-        randomColor();
-        $("h1").html("Game Started");
-        $("p").html("Level " + gameLevel);
-        userTurn();
-      }
-    });
+    .on("keydown", initializeGame);
+
+  $(document)
+    .off("touchstart")
+    .on("touchstart", initializeGame);
 }
 
 start();
