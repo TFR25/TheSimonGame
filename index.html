@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Welcome to the Simon Game</h1>
+        <h2></h2>
+        <p>Press Any Key to Start</p>
+      </div>
+      <div class="backgroundImg">
+        <div
+          type="button"
+          id="green"
+          class="greenBtn btn"
+          onclick="playGreen()"
+        >
+          Click
+        </div>
+        <div
+          type="button"
+          id="yellow"
+          class="yellowBtn btn"
+          onclick="playYellow()"
+        >
+          Click
+        </div>
+        <div type="button" id="red" class="redBtn btn" onclick="playRed()">
+          Click
+        </div>
+        <div type="button" id="blue" class="blueBtn btn" onclick="playBlue()">
+          Click
+        </div>
+      </div>
+      <div class="footer">
+        <footer id="copyright"></footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

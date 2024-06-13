@@ -1,0 +1,133 @@
+body {
+  font-family: "Press Start 2P";
+  text-align: center;
+  background-color: #011f3f;
+  color: #fef2bf;
+}
+
+.container {
+  margin: 20px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(2fr, 1fr);
+  grid-template-rows: 200px 200px 200px 100px;
+  background-color: #011f3f;
+  text-align: center;
+  margin: auto;
+  /* container is 100 view height */
+  min-height: 100vh;
+  /* max-width is 400 and min width is 378. this ensures the click buttons do not exceed the borders of the background 
+  button images when game is rendered on different devices.*/
+  max-width: 400px;
+  min-width: 378px;
+  /* box-shadow adds visual appeal on larger screens. */
+  box-shadow: 10px 10px 100px #100101;
+}
+
+.title {
+  margin: 5%;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  font-family: "Press Start 2P" cursive;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.gameOver {
+  background-color: red;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.backgroundImg {
+  display: grid;
+  grid-template-columns: repeat(2fr, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  background-image: url("./images/SimonGame.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  grid-column: 1/3;
+  grid-row: 2/4;
+  gap: 8% 4%;
+}
+
+.backgroundImg > .greenBtn {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1;
+  margin: 45%;
+  justify-self: center;
+  align-items: start;
+  background-color: #2fd954;
+}
+
+.backgroundImg > .yellowBtn {
+  margin: 40%;
+  justify-self: end;
+  background-color: #e2e62e;
+}
+
+.backgroundImg > .redBtn {
+  margin: 20%;
+  justify-self: center;
+  background-color: #f31a1a;
+}
+
+.backgroundImg > .blueBtn {
+  margin-top: 20%;
+  margin-right: 20%;
+  justify-self: center;
+  background-color: #325dcc;
+}
+
+.btn {
+  color: black;
+  height: 25%;
+  width: 40%;
+  align-items: center;
+  font-size: 24px;
+}
+
+.greenBtn {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1;
+  align-items: start;
+}
+
+.yellowBtn {
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 1;
+}
+
+.redBtn {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 2;
+}
+
+.blueBtn {
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 2;
+}
+
+.footer {
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 4/5;
+  font-size: 1rem;
+  color: #fef2bf;
+  align-items: center;
+}
+
+.elementFlash {
+  border-radius: 50%;
+  color: #fbf6eb;
+  box-shadow: 0px 2px 25px 23px #fbf6eb;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
