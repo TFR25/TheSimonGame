@@ -1,6 +1,7 @@
 # The Simon Game
 This project is a simple implementation of the classic Simon game.
 The game challenges players to memorize and reproduce a sequence of colors and sounds.
+The sound files are from The Complete 2024 Web Development Bootcamp taught by Dr. Angela Yu.
 ## Features
 - Four colored buttons (green, yellow, red, blue) that light up and play a sound.
 - Random sequence generation for the player to follow.
